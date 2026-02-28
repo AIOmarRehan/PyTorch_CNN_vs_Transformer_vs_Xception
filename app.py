@@ -1,8 +1,3 @@
-"""
-Unified PyTorch Model Comparison App
-Runs three different PyTorch models simultaneously on the same input image for comparison
-"""
-
 import os
 import sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -18,9 +13,7 @@ from model_handlers.hugging_face_handler import HuggingFaceModel
 from model_handlers.xception_handler import XceptionModel
 
 
-# ====================
 # Global Configuration
-# ====================
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODELS_DIR = os.path.join(BASE_DIR, "models")
@@ -53,9 +46,7 @@ MODELS_INFO = {
 }
 
 
-# ====================
 # Model Loading
-# ====================
 
 def load_models():
     """Load all three models at startup"""
@@ -94,9 +85,7 @@ def load_models():
     print("="*60 + "\n")
 
 
-# ====================
 # Prediction Functions
-# ====================
 
 def predict_with_model_1(image: Image.Image) -> Tuple[str, float, Dict]:
     """Predict with Basic CNN Model"""
@@ -135,14 +124,6 @@ def predict_with_model_3(image: Image.Image) -> Tuple[str, float, Dict]:
 
 
 def predict_all_models(image: Image.Image):
-    """
-    Run all three models simultaneously on the input image
-    
-    Returns:
-        Tuple of (results_dict_1, results_dict_2, results_dict_3, comparison_text, 
-                  probs_dict_1, probs_dict_2, probs_dict_3, consensus_html)
-    """
-    
     if image is None:
         empty_result = {"Model": "N/A", "Prediction": "No image", "Confidence": 0.0}
         empty_probs = {}
@@ -221,9 +202,7 @@ def predict_all_models(image: Image.Image):
     return result_1, result_2, result_3, comparison_text, result_1_probs, result_2_probs, result_3_probs, consensus_html
 
 
-# ====================
 # Gradio Interface
-# ====================
 
 def build_interface() -> gr.Blocks:
     """Build the Gradio interface"""
@@ -325,9 +304,7 @@ def build_interface() -> gr.Blocks:
     return demo
 
 
-# ====================
 # Main Entry Point
-# ====================
 
 if __name__ == "__main__":
     # Load all models at startup
