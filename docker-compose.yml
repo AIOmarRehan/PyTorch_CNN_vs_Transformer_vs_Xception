@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  unified-model-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pytorch-unified-model-comparison
+    ports:
+      - "7860:7860"
+    environment:
+      PYTHONUNBUFFERED: 1
+      GRADIO_SERVER_NAME: 0.0.0.0
+      GRADIO_SERVER_PORT: 7860
+    volumes:
+      # Optional: Mount models directory if you want to update models without rebuilding
+      - ./models:/app/models
+    restart: unless-stopped
+    # Optional: Increase memory limit if needed
+    # deploy:
+    #   resources:
+    #     limits:
+    #       memory: 8G
+    #     reservations:
+    #       memory: 4G

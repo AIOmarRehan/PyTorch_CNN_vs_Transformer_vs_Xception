@@ -1,0 +1,33 @@
+# PyTorch Unified Model Comparison
+# Combined dependencies for all three models
+
+# Web Framework & UI
+gradio
+fastapi
+uvicorn
+python-multipart
+
+# Core ML Framework
+torch
+torchvision
+
+# Hugging Face & Transformers
+transformers
+safetensors
+datasets
+evaluate
+
+# Image Processing & Numerical Computing
+pillow
+numpy
+opencv-python
+
+# Vision Models Library (for Xception)
+timm
+
+# Additional utilities
+pydantic
+huggingface_hub
+
+# Optional: For enhanced performance
+scikit-learn

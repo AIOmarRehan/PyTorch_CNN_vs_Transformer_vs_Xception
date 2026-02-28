@@ -1,0 +1,44 @@
+{
+  "architectures": [
+    "ViTForImageClassification"
+  ],
+  "attention_probs_dropout_prob": 0.0,
+  "dtype": "float32",
+  "encoder_stride": 16,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.0,
+  "hidden_size": 192,
+  "id2label": {
+    "0": "Auto Rickshaws",
+    "1": "Bikes",
+    "2": "Cars",
+    "3": "Motorcycles",
+    "4": "Planes",
+    "5": "Ships",
+    "6": "Trains"
+  },
+  "image_size": 224,
+  "initializer_range": 0.02,
+  "intermediate_size": 768,
+  "label2id": {
+    "Auto Rickshaws": 0,
+    "Bikes": 1,
+    "Cars": 2,
+    "Motorcycles": 3,
+    "Planes": 4,
+    "Ships": 5,
+    "Trains": 6
+  },
+  "layer_norm_eps": 1e-12,
+  "model_type": "vit",
+  "num_attention_heads": 3,
+  "num_channels": 3,
+  "num_hidden_layers": 12,
+  "patch_size": 16,
+  "pooler_act": "tanh",
+  "pooler_output_size": 192,
+  "problem_type": "single_label_classification",
+  "qkv_bias": true,
+  "transformers_version": "5.0.0",
+  "use_cache": false
+}

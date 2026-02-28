@@ -1,0 +1,31 @@
+{
+    "model_architecture": "PowerfulCNN",
+    "num_classes": 7,
+    "input_shape": [
+        3,
+        224,
+        224
+    ],
+    "normalization_mean": [
+        0.46052455367479384,
+        0.5079975089484482,
+        0.5388914703636689
+    ],
+    "normalization_std": [
+        0.2887674684678098,
+        0.2696178694962567,
+        0.2943129167380753
+    ],
+    "class_names": {
+        "0": "Auto Rickshaws",
+        "1": "Bikes",
+        "2": "Cars",
+        "3": "Motorcycles",
+        "4": "Planes",
+        "5": "Ships",
+        "6": "Trains"
+    },
+    "training_device": "cuda",
+    "saved_timestamp": "20260226_034332",
+    "model_size_mb": 2.012946128845215
+}
